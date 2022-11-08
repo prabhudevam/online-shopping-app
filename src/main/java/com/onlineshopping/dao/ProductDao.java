@@ -10,6 +10,5 @@ import com.onlineshopping.model.Product;
 @Repository
 public interface ProductDao extends JpaRepository<Product, Integer> {
 	
-	List<Product> findByCategoryId(int category);
 
 }

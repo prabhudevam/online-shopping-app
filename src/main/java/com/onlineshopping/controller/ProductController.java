@@ -47,22 +47,15 @@ public class ProductController {
 	
 
 	@GetMapping("all")
-	public Product getAllProducts() {
+	public List<Product> getAllProducts() {
 		
 
-		Product x=new Product();
-		x.setId(1);
-		x.setDescription("food");
-		x.setQuantity(3);
-		x.setTitle("lays");
-		x.setPrice(new BigDecimal(200));
-		Category c=new Category();
-		c.setId(11);
-		c.setDescription("utilities");
-		c.setTitle("snacks");
-		x.setCategory(c);
-		return x;
+		return productDao.findAll();
 		
+	}
+	@GetMapping("getProd/{id}")
+	public Product getProduct(@PathVariable int id){
+		return productDao.findById(id).get();
 	}
 	
 

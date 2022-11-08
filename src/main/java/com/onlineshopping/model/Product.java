@@ -20,9 +20,7 @@ public class Product {
     private BigDecimal price;
     private String imageName;
     
-    @ManyToOne
-    @JoinColumn(name ="categoryId")
-    private Category category;
+
     
     
 	public int getId() {
@@ -61,11 +59,11 @@ public class Product {
 	public void setImageName(String imageName) {
 		this.imageName = imageName;
 	}
-	public Category getCategory() {
+	/*public Category getCategory() {
 		return category;
 	}
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	
+	*/
 }
